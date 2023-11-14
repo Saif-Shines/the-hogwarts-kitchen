@@ -1,0 +1,25 @@
+meta {
+  name: Receipes
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://api.portkey.ai/v1/prompts/cf8e34c2-e330-43cb-a778-83c175a306a2/generate
+  body: json
+  auth: none
+}
+
+headers {
+  x-portkey-api-key: IvXbiI5SP18WO1BTI7jCR5HZxkA=
+  x-portkey-cache: semantic
+}
+
+body:json {
+  {
+    "variables": {
+      "ingredients": "goat, green peas, olives",
+      "recipeSample": ""
+    }
+  }
+}

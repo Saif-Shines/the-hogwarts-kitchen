@@ -14,11 +14,9 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@stricjs/router": "^5.0.6",
-    "@stricjs/utils": "^1.6.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "openai": "^4.17.5",
-    "portkey-ai": "^0.1.16"
+    "openai": "4.17.5",
+    "portkey-ai": "0.1.16"
   }
 }
