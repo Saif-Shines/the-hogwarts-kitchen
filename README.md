@@ -1,28 +1,36 @@
 ## The Hogwards Kitchen
 
-This web app helps you find new and delicious recipes to cook, based on the ingredients you have on hand. Simply enter your ingredients into the search bar, and the app will return a list of recipes that you can make.
+![screenshot](./public/images/readme-banner.png)
+This web app helps you find new and delicious recipes to cook, based on the ingredients you have on hand. Simply enter your ingredients into the search bar, and the app will return a list of recipes that you can make. The catch? In Hogwarts style!
 
-In addition to suggesting recipes, the app also provides detailed instructions and nutritional information for each recipe. You can also save your favorite recipes to your account, and create shopping lists for the ingredients you need.
+## Flow
 
-Whether you're a beginner cook or a seasoned chef, the Cooking Recipe Recommender is a great tool for finding new and exciting recipes to try.
+![flow](./public/images/readme-portkey.svg)
 
-### Features
+### Try it out
 
-- Suggest recipes based on the ingredients you have on hand
-- Filter results by course type, cuisine, and difficulty level
-- Provide detailed instructions and nutritional information for each recipe
-- Allow users to save their favorite recipes and create shopping lists
+## Prerequisites
 
-### Benefits
+- This project is built using [bun package manager](https://bun.sh/docs/installation).
+- An OpenAI [API Key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-api-key)
+- An API Key from [Portkey](https://portkey.ai/)
 
-- Save time and energy by finding recipes that you can make with the ingredients you already have
-- Discover new and exciting recipes that you might not have tried otherwise
-- Learn more about cooking techniques and nutrition
-- Create a more organized and efficient cooking routine
+## Instructions
 
-### Who is this app for?
+```sh
+# clone the repository
+git clone git@github.com:Saif-Shines/the-hogwarts-kitchen.git
+cd the-hogwarts-kitchen
 
-The Cooking Recipe Recommender is for anyone who wants to find new and delicious recipes to cook. It's especially helpful for people who are short on time, or who have limited access to fresh ingredients. The app is also a great tool for beginner cooks, as it provides detailed instructions and nutritional information for each recipe.
+# install dependencies from root
+bun install
+
+# substitute API keys
+echo "OPENAI_API_KEY=your_openai_api_key" >> .env
+echo "PORTKEYAI_API_KEY=your_portkeyai_api_key" >> .env
+```
+
+**Bonus**: Open Portkey > Logs, to see the all the requests facilitated by portkey and serving from cache to save to tokens, hence, $$.
 
 ## License
 
