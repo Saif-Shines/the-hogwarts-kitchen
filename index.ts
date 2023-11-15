@@ -5,12 +5,7 @@ import path from "path";
 import cors from "cors";
 import routes from "./routes";
 
-import {
-  recipeSample,
-  systemRole,
-  promptUserContext,
-  promptEndpoint,
-} from "./utils/templates";
+import { recipeSample, promptUserContext } from "./utils/templates";
 
 const app = express();
 const port = 3000;
