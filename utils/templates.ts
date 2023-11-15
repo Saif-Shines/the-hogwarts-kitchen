@@ -54,3 +54,6 @@ export function promptUserContext(
       '''
   `;
 }
+
+export const promptEndpoint =
+  "https://api.portkey.ai/v1/prompts/cf8e34c2-e330-43cb-a778-83c175a306a2/generate";

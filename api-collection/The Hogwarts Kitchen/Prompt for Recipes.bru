@@ -1,0 +1,50 @@
+meta {
+  name: Prompt for Recipes
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://api.portkey.ai/v1/prompts/cf8e34c2-e330-43cb-a778-83c175a306a2/generate
+  body: json
+  auth: none
+}
+
+query {
+  ~: 
+}
+
+headers {
+  x-portkey-api-key: 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
+  x-portkey-retry-count: 2
+  x-portkey-cache: semantic
+}
+
+body:json {
+  {
+    "variables": {
+      "ingredients": "tomatoes",
+      "recipeSample": `{
+    recipe: {
+      name: "Magical Marinara Pasta",
+      ingredients: [
+        "2 cups of enchanted pasta",
+        "1 cup of mystical marinara sauce",
+        "1/2 cup of grated phoenix feather cheese",
+        "A pinch of basil leaves",
+        "A dash of enchanted olive oil",
+      ],
+      instructions: [
+        "Boil the enchanted pasta in a cauldron until al dente. Don't forget to add a sprinkle of sea salt for extra magic!",
+        "In a magical skillet, heat the enchanted olive oil over medium heat.",
+        "Pour in the mystical marinara sauce and let it simmer until it's dancing with flavors.",
+        "Add the cooked pasta to the skillet, tossing it gently to coat every strand in the enchanting marinara.",
+        "Serve the pasta in bewitched bowls, topping each portion with a generous sprinkle of grated phoenix feather cheese and a pinch of fresh basil leaves.",
+      ],
+      servings: 4,
+      difficulty: "Intermediate",
+      magicLevel: "High",
+    }`
+    }
+  }
+}

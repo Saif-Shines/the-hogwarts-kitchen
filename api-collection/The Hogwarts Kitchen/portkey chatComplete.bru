@@ -1,0 +1,29 @@
+meta {
+  name: portkey chatComplete
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://api.portkey.ai/v1/chatComplete
+  body: json
+  auth: none
+}
+
+body:json {
+   {
+          config: {
+            provider: "openai",
+            virtual_key: "open-ai-key-04ba3e",
+          },
+          params: {
+            messages: [
+              {
+                role: "user",
+                content: promptUserContext(ingredients, recipeSample),
+              },
+            ],
+            model: "text-davinci-002",
+          },
+        }
+}
