@@ -50,7 +50,7 @@ app.post("/api/axios/recipes", async (req, res) => {
         headers: {
           "x-portkey-api-key": process.env.PORTKEYAI_API_KEY,
           "x-portkey-retry-count": "2",
-          "x-portkey-cache": "simple",
+          "x-portkey-cache": "semantic",
           "Content-Type": "application/json",
         },
       }

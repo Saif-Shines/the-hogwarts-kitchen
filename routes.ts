@@ -3,10 +3,6 @@ import { portkey } from "./utils/templates";
 import { promptUserContext, recipeSample, systemRole } from "./utils/templates";
 const router = express.Router();
 
-router.get("/test", (req, res) => {
-  res.end("routes success");
-});
-
 router.post("/api/portkey/recipes", async (req, res) => {
   const body = req.body;
   const ingredients = body.ingredients;
@@ -23,7 +19,6 @@ router.post("/api/portkey/recipes", async (req, res) => {
       },
     ],
   });
-  console.log(response.choices[0].message);
   res.json(response.choices[0].message);
 });
 

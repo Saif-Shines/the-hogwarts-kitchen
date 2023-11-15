@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   font-family: "Cinzel", serif;
-  height: 40vh;
 }
 
 h1 {
@@ -31,7 +30,8 @@ input[type="text"]:focus {
   border-color: #6d4c41;
 }
 
-p {
+p,
+li {
   font-family: cursive;
   padding: 0%;
   margin-top: 2px;
@@ -67,6 +67,20 @@ button:hover {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: oblique;
   padding: 1rem;
+}
+
+.recipe li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appear 0.5s forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 600px) {
