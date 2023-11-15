@@ -1,4 +1,18 @@
+import { Portkey } from "portkey-ai";
 import { RecipeSample } from "./types";
+
+export const portkey = new Portkey({
+  apiKey: `${process.env.PORTKEYAI_API_KEY}`,
+  mode: "single",
+  llms: [
+    {
+      provider: "openai",
+      model: "gpt-3.5-turbo",
+      api_key: `${process.env.OPENAI_API_KEY}`,
+      temperature: 0,
+    },
+  ],
+});
 
 export const recipeSample = {
   recipe: {
@@ -25,7 +39,10 @@ export const recipeSample = {
 
 export const systemRole = `You are head chef at Hogwarts. You can use any ingredients to prepare innovative recipes and dishes for Hogwards students!`;
 
-export function promptUserContext(ingrediants: string, sampleJSON: RecipeSample) {
+export function promptUserContext(
+  ingrediants: string,
+  sampleJSON: RecipeSample
+) {
   return `
    Create a recipe with the list of ingredients defined in the markup.
       <ingredients>${JSON.stringify(ingrediants)}</ingredients>
