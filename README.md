@@ -7,7 +7,7 @@ This web app helps you find new and delicious recipes to cook, based on the ingr
 
 ![flow](./public/images/readme-portkey.svg)
 
-### Try it out
+# Try it out
 
 ## Prerequisites
 
@@ -28,9 +28,12 @@ bun install
 # substitute API keys
 echo "OPENAI_API_KEY=your_openai_api_key" >> .env
 echo "PORTKEYAI_API_KEY=your_portkeyai_api_key" >> .env
+
+# run the app
+bun start
 ```
 
-**Bonus**: Open Portkey > Logs, to see the all the requests facilitated by portkey and serving from cache to save to tokens, hence, $$.
+**Bonus**: Open `Portkey > Dashboard > Logs`, to see the all the requests facilitated by portkey and serving from cache to save to tokens, hence, `$$$`.
 
 ## License
 
